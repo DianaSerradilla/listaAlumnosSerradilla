@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #a0c9d9;
+}
+.container-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  gap: 1rem;
+}
+
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 3rem;
+  padding: 3rem;
+}
+
+.cards-alumnos {
+  border-radius: 10px;
+  width: 18rem;
+  height: 33rem;
+}
+
+.img-alumno {
+  height: 10rem;
+  max-height: 5rem;
+}
+
+.btn-aprobado {
+  background-color: #68be9a;
+  color: #f2f2f2;
+}
+
+.btn-desaprobado {
+  color: #f2f2f2;
+  background-color: #d93d04;
+}
+
+.mensaje-aprobado {
+  background-color: #68be9a;
+  color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.mensaje-desaprobado {
+  background-color: #d93d04;
+  color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}

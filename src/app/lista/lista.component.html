@@ -1,0 +1,18 @@
+<div class="container-fluid container-cards">
+  <div class="card cards-alumnos" *ngFor="let alumno of alumnos; index as i">
+    <img src="{{alumno.img}}" class="card-img-top mg-alumno" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{alumno.nombre | uppercase}}</h5>
+      <p class="card-text">Nota examen: {{alumno.nota}}
+      </p>
+      <div class="container-buttons">
+        <a href="#" class="btn btn-aprobado" (click)="aprobar(i)">Aprobar</a>
+        <a href="#" class="btn btn-desaprobado" (click)="desaprobar(i)">Desaprobar</a>
+      </div>
+      <div>
+        <p class="mensaje-aprobado" *ngIf="alumno.estado == 'aprobado'">Alumno aprobado</p>
+        <p class="mensaje-desaprobado" *ngIf="alumno.estado == 'desaprobado'">Alumno desaprobado</p>
+      </div>
+    </div>
+  </div>
+</div>
