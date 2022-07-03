@@ -10,8 +10,14 @@
         <a href="#" class="btn btn-desaprobado" (click)="desaprobar(i)">Desaprobar</a>
       </div>
       <div>
-        <p class="mensaje-aprobado" *ngIf="alumno.estado == 'aprobado'">Alumno aprobado</p>
-        <p class="mensaje-desaprobado" *ngIf="alumno.estado == 'desaprobado'">Alumno desaprobado</p>
+
+        <div *ngIf="alumno.estado != '' ">
+          <p
+            [ngClass]="{'mensaje-aprobado' : alumno.estado == 'aprobado', 'mensaje-desaprobado' : alumno.estado == 'desaprobado'}">
+            Alumno {{alumno.estado}}</p>
+        </div>
+        <!-- <p class="mensaje-aprobado" *ngIf="alumno.estado == 'aprobado'">Alumno aprobado</p>
+        <p class="mensaje-desaprobado" *ngIf="alumno.estado == 'desaprobado'">Alumno desaprobado</p> -->
       </div>
     </div>
   </div>
